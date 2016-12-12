@@ -1,0 +1,9 @@
+---
+:orm: activeredord
+:test: none
+:mock: none
+:script: none
+:renderer: none
+:stylesheet: none
+:namespace: Agenda
+:migration_format: number

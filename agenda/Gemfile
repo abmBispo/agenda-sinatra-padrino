@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+# Project requirements
+gem 'rake'
+
+# Component requirements
+gem 'activerecord', '>= 3.1', :require => 'active_record'
+gem 'mysql2'
+
+# Test requirements
+# Padrino Stable Gem
+gem 'padrino', '0.13.3.3'
+# JSON implementation for Ruby http://flori.github.com/json.
+gem 'json', '~> 2.0', '>= 2.0.2'
