@@ -10,8 +10,8 @@ Primeiro criamos a pasta `docs` lá pusemos o *bash script* para instalação e 
 
 Por último foi adicionado ao arquivo `.gitignore` o diretório criado `bin` na raiz do projeto Padrino.
 
-### 2º commit - criando o DER
-Neste segundo commit produzimos o Diagrama Entidade Relacionamento (DER) e o `create_script.sql`, ambos no diretório `docs/`. Veja o DER abaixo: 
+#### 2º commit - criando o DER
+Neste segundo commit produzimos o Diagrama Entidade Relacionamento (DER) e o `create_script.sql`, ambos no diretório `docs/`. Veja o DER abaixo:
 ![DER][DER]
 
 [DER]: https://github.com/abmBispo/agenda-sinatra-padrino/raw/master/docs/DER.png "DER"
