@@ -15,3 +15,5 @@ Neste segundo commit produzimos o Diagrama Entidade Relacionamento (DER) e o `cr
 ![DER][DER]
 
 [DER]: https://github.com/abmBispo/agenda-sinatra-padrino/raw/master/docs/DER.png "DER"
+
+#### 3º commit - usando
