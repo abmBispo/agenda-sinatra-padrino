@@ -20,23 +20,19 @@ ActiveRecord::Base.configurations[:development] = {
   :database  => 'agenda_development',
   :pool      => 5,
   :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :socket    => '/tmp/mysql.sock'
-
+  :password  => 'dawkankkek',
+  :host      => 'localhost'
 }
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter   => 'mysql2',
   :encoding  => 'utf8',
   :reconnect => true,
-  :database  => 'agenda_production',
+  :database  => 'Agenda_Pessoal',
   :pool      => 5,
   :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :socket    => '/tmp/mysql.sock'
-
+  :password  => 'dawkankkek',
+  :host      => 'localhost'
 }
 
 ActiveRecord::Base.configurations[:test] = {
@@ -46,10 +42,8 @@ ActiveRecord::Base.configurations[:test] = {
   :database  => 'agenda_test',
   :pool      => 5,
   :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :socket    => '/tmp/mysql.sock'
-
+  :password  => 'dawkankek',
+  :host      => 'localhost'
 }
 
 # Setup our logger

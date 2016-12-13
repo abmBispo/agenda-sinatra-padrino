@@ -16,4 +16,18 @@ Neste segundo commit produzimos o Diagrama Entidade Relacionamento (DER) e o `cr
 
 [DER]: https://github.com/abmBispo/agenda-sinatra-padrino/raw/master/docs/DER.png "DER"
 
-#### 3º commit - usando
+#### 3º commit - criando o database e suas tabelas
+A primeira coisa que devemos fazer para criar o DB do nosso projeto através das *rake tasks* é configurar o nosso adaptador. Para este caso, o arquivo de configuração em `config/database.rb` foi modificado para aceitar o banco de dados que viríamos a utilizar. **Importante: foi retirado das configurações o caminho auto gerado até o socket do MySQL.**
+
+Então executamos dentro do diretório `./agenda/` o comando `bundle exec rake ar:create` para criar o DB no nosso MySQL. Após isso nós geramos as tabelas com o construtor do próprio Padrino (muito parecido com o scaffold do Ruby on Rails). Veja a tabela abaixo que relaciona as entidades criadas e seus respectivos comandos.
+
+|  Entidade/Tabela | Comandos     |
+| ---------------- |:-------------|
+| Usuario          |`padrino g model usuarios nome:string login:string senha:string`|
+| Enderecos        | `padrino g model enderecos logradouro:string cidade:string estado:string` |
+| Telefones        | `padrino g model telefones numero:string` |
+| Contatos        | `padrino g model contatos usuario_id:integer contato_id:integer` |
+| Telefones_usuarios|`padrino g model telefones_usuarios usuario_id:integer telefone_id:integer`|
+| Usuarios_enderecos| `padrino g model usuarios_enderecos usuario_id:integer enderecos_id:integer` |
+
+Ademais, modificamos os models para receberem as relações corretas, usando `has_one` e `has_and_belongs_to_many`. Assim, por último nós migramos o DB do Ruby para o MySQL com o comando `padrino rake ar:migrate`. Isso construiu as tabelas no sistema e gerou o arquivo `db/schema.rb` que mais tarde seria usado para gerar o SQL criador final.
