@@ -25,6 +25,9 @@ gem 'mysql2'
 # Padrino Stable Gem
 gem 'padrino', '0.13.3.3'
 
+# This is a JSON implementation as a Ruby extension in C.
+gem 'json', '~> 1.8', '>= 1.8.3'
+
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 

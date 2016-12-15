@@ -20,7 +20,7 @@ ActiveRecord::Base.configurations[:development] = {
   :database  => 'agenda_development',
   :pool      => 5,
   :username  => 'root',
-  :password  => 'dawkankkek',
+  :password  => 'Ushuaia2',
   :host      => 'localhost'
 }
 
@@ -31,7 +31,7 @@ ActiveRecord::Base.configurations[:production] = {
   :database  => 'Agenda_Pessoal',
   :pool      => 5,
   :username  => 'root',
-  :password  => 'dawkankkek',
+  :password  => 'Ushuaia2',
   :host      => 'localhost'
 }
 
@@ -42,7 +42,7 @@ ActiveRecord::Base.configurations[:test] = {
   :database  => 'agenda_test',
   :pool      => 5,
   :username  => 'root',
-  :password  => 'dawkankek',
+  :password  => 'Ushuaia2',
   :host      => 'localhost'
 }
 

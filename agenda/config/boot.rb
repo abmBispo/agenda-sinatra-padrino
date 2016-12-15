@@ -25,8 +25,7 @@ Bundler.require(:default, RACK_ENV)
 # I18n.default_locale = :en
 # I18n.enforce_available_locales = false
 #
-# ## Configure your HTML5 data helpers
-#
+# ## Configure your HTML5 data helpecriando o database e suas tabelas
 # Padrino::Helpers::TagHelpers::DATA_ATTRIBUTES.push(:dialog)
 # text_field :foo, :dialog => true
 # Generates: <input type="text" data-dialog="true" name="foo" />
