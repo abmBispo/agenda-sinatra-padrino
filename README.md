@@ -46,7 +46,7 @@ Ademais, modificamos os models para receberem as relações corretas, usando `ha
 ```sh
 $ padrino rake ar:migrate
 ```
-Isso construiu as tabelas no sistema e gerou o arquivo `db/schema.rb` que mais tarde seria usado para gerar o SQL criador final.git@github.com:abmBispo/sinatra-first-app.git
+Isso construiu as tabelas no sistema e gerou o arquivo `db/schema.rb` que mais tarde seria usado para gerar o SQL criador final.
 
 #### 4º commit - gerando os controllers e helpers
 Adicionamos ao `./app/app.rb` a diretiva `set :protect_from_csrf, false`. No entanto, não é seguro fazer o _deploy_ do sistema em servidor para servir de API na _web_ sem esta opção. Foi feito isso apenas para parar o a execução do `Rack::Protection::AuthenticityToken`. Ele bloqueava todas as requisições com o _status 403 forbidden_ pelo fato de não usarmos o protocolo _HTTPS_ e nem o token de autenticidade.
