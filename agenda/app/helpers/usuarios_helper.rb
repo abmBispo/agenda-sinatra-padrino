@@ -33,7 +33,7 @@ module Agenda
       # *Returns the object for ID = 1
       def get(id)
         if Usuarios.exists?(id: id)
-          @usuario = Usuarios.find(id);
+          @usuario = Usuarios.find(id)
           return @usuario
         else
           raise ArgumentError, 'This Usuarios do not exists!'
@@ -46,7 +46,7 @@ module Agenda
       # *Returns the first item or nil.
       def getByNome(nome)
         if Usuarios.exists?(nome: nome)
-          @usuario = Usuarios.find_by(nome: nome);
+          @usuario = Usuarios.find_by(nome: nome)
           return @usuario
         else
           raise ArgumentError, 'This Usuarios do not exists!'
@@ -68,7 +68,7 @@ module Agenda
         end
         # Testing if exists that Usuarios object
         if Usuarios.exists?(id: id)
-          @usuario = Usuarios.update(id,attributes);
+          @usuario = Usuarios.update(id,attributes)
           return @usuario
         else
           raise ArgumentError, "The id doesn't refer to any Usuarios object!"
@@ -83,7 +83,7 @@ module Agenda
       # *Deletes an object from DB
       def delete(id)
         if Usuarios.exists?(id: id)
-          Usuarios.delete(id);
+          Usuarios.delete(id)
         else
           raise ArgumentError, 'This Usuarios do not exists!'
         end

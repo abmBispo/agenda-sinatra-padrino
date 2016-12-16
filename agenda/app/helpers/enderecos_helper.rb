@@ -71,6 +71,42 @@ module Agenda
         end
       end
 
+      # @methods UPDATE #
+
+      # @param Enderecos.id integer, hash_attributes ...
+      # @return Enderecos object
+      # @name update
+      # *Updates an object and persists it on DB.
+      def update(id, attributes = {})
+        # Testing each key
+        attributes.each do |key,value|
+          if(key!="id"&&key!="logradouro"&&key!="cidade"&&key!="estado")
+            raise ArgumentError, "The hash contains invalid values!"
+          end
+        end
+        # Testing if exists that Usuarios object
+        if Enderecos.exists?(id: id)
+          @endereco = Enderecos.update(id,attributes);
+          return @endereco
+        else
+          raise ArgumentError, "The id doesn't refer to any Enderecos object!"
+        end
+      end
+
+      # @methods DELETE #
+
+      # @param Enderecos.id integer
+      # @return nil
+      # @name delete
+      # *Deletes an object from DB
+      def delete(id)
+        if Enderecos.exists?(id: id)
+          Enderecos.delete(id);
+        else
+          raise ArgumentError, 'This Enderecos does not exists!'
+        end
+      end
+
     end
     helpers EnderecosHelper
   end

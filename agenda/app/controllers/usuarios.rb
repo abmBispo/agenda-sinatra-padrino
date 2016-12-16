@@ -98,7 +98,7 @@ Agenda::App.controllers :usuarios do
 
     begin
       # Accessing controller
-      @usuario = Agenda::App::UsuariosHelper::delete(params["id"])
+      Agenda::App::UsuariosHelper::delete(params["id"])
       # Response
       status = 200
     rescue ArgumentError => e
