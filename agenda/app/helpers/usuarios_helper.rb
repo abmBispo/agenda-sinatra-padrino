@@ -8,7 +8,7 @@ module Agenda
 
       # @methods CREATE #
 
-      # @param nome string
+      # @param nome string, login string, senha string
       # @return Usuarios object
       # @name create
       # *Creates an object of Usuarios class and persists it on DB. Returns Usuarios.

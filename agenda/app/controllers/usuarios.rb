@@ -6,9 +6,9 @@ Agenda::App.controllers :usuarios do
   # @route C
 
   # @POST /json
-  # @param nome string
+  # @param nome string, login string, senha string
   # @return Usuarios object > json
-  post "/criar/" do
+  post "/criar" do
     # Reading json from request body
     request.body.rewind()
     @params = ActiveSupport::JSON.decode(request.body.read)
